@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html,
+body {
+  max-width: 100vw;
+}
+
+body {
+  position: relative;
+  counter-reset: section;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  text-transform: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  cursor: default;
+}
+
+.hero {
+  height: 100vh;
+  background: url("images/hero_bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 50;
+}
+
+header.scrolled {
+  background: white;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+header nav {
+  height: 60px;
+  max-width: 950px;
+  margin: 0px auto;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav .nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+header nav .nav-brand .brand {
+  display: none;
+}
+
+header nav ol {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+header nav ol li {
+  color: white;
+  border-bottom: 1px solid white;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+}
+
+header.scrolled nav ol li {
+  color: #414f6b;
+  border-bottom: 1px solid #414f6b;
+}
+
+header nav ol li::before {
+  counter-increment: section;
+  content: counter(section, decimal-leading-zero) ".";
+}
+
+.one .content {
+  height: 80vh;
+  background: url("images/section_1_bg.webp");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.one .content .history {
+  max-width: 950px;
+  margin: 0px auto;
+  padding-top: 40px;
+}
+
+.one .content .history span {
+  position: relative;
+}
+
+.one .content .history span .marker {
+  color: #414f6b;
+  font-size: 135.6px;
+  line-height: 100%;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.one .content .history span .item {
+  color: #414f6b;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  position: absolute;
+  bottom: 25px;
+  left: 130px;
+}
+
+.one .content .history .history_txt {
+  width: calc(100% - 160px);
+  margin: 6px auto 0px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.one .carousel {
+  height: 180px;
+  background: url("images/carousel_bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.two .content {
+  background: white;
+  height: 180px;
+  display: flex;
+  align-items: center;
+}
+
+.two .content .climb {
+  max-width: 950px;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.two .content .climb span {
+  position: relative;
+}
+
+.two .content .climb span .marker {
+  color: #414f6b;
+  font-size: 135.6px;
+  line-height: 100%;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.two .content .climb span .item {
+  color: #414f6b;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  position: absolute;
+  bottom: 25px;
+  left: 150px;
+}
+
+.two .content .climb .climb_txt {
+  width: calc(100% - 280px);
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#tabs {
+  background: #414f6b;
+}
+
+#tabs .tab-nav {
+  width: 100%;
+  max-width: 950px;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+}
+
+#tabs .tab-nav li {
+  padding: 10px 20px;
+  color: #b0b4be;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#tabs .tab-nav li.active,
+#tabs .tab-nav li:hover {
+  color: #414f6b;
+  background: #b0b4be;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+#tabs .tab-content {
+  display: none;
+  height: 550px;
+  background: url("images/section_2_bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  position: relative;
+}
+
+#tabs .tab-content .schedule {
+  position: absolute;
+  top: 100px;
+  left: 350px;
+  background: white;
+  padding: 20px 40px;
+  width: 350px;
+}
+
+#tabs .tab-content .schedule h4 {
+  color: #414f6b;
+  font-size: 32px;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+#tabs .tab-content .schedule ul li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin-bottom: 24px;
+}
+
+#tabs .tab-content .schedule ul li:first-child,
+#tabs .tab-content .schedule ul li:last-child {
+  margin-bottom: 0px;
+}
