@@ -178,6 +178,27 @@ header nav ol li::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.owl-carousel {
+  width: 100%;
+  max-width: 950px;
+  margin: 0px auto;
+}
+
+.owl-carousel .item {
+  /* width: 240px; */
+  height: 120px;
+  aspect-ratio: 2/1;
+  position: relative;
+}
+
+.owl-carousel .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .two .content {
@@ -304,4 +325,76 @@ header nav ol li::before {
 #tabs .tab-content .schedule ul li:first-child,
 #tabs .tab-content .schedule ul li:last-child {
   margin-bottom: 0px;
+}
+
+footer {
+  height: 80px;
+  background: #414f6b;
+  display: flex;
+  align-items: center;
+}
+
+footer .content {
+  height: 75px;
+  width: 100%;
+  max-width: 950px;
+  margin: 0px auto;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .content p {
+  color: #63769d;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+}
+
+@media (max-width: 1024px) {
+  .one .content .history {
+    width: 100%;
+    padding: 40px 20px 0px;
+  }
+
+  .two .content .climb {
+    width: 100%;
+    padding: 0px 20px;
+  }
+
+  #tabs .tab-nav {
+    padding: 0px 20px;
+  }
+
+  .owl-carousel {
+    padding: 0px 40px;
+  }
+
+  .owl-carousel .item {
+    aspect-ratio: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  #tabs .tab-content {
+    width: 100%;
+    padding: 40px 60px 0px;
+  }
+
+  #tabs .tab-content .schedule {
+    position: relative;
+    top: unset;
+    left: unset;
+  }
+}
+
+@media (max-width: 425px) {
+  #tabs {
+    display: none;
+  }
 }

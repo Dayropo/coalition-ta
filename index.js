@@ -22,10 +22,6 @@ $(document).ready(function () {
     }
   })
 
-  $(".nav-brand").click(function () {
-    $(window).scrollTop(0)
-  })
-
   $("#history-link").click(function () {
     $(".one")[0].scrollIntoView({
       behaviour: "smooth",
@@ -36,5 +32,25 @@ $(document).ready(function () {
     $(".two")[0].scrollIntoView({
       behaviour: "smooth",
     })
+  })
+
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 40,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 4,
+      },
+    },
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
   })
 })
